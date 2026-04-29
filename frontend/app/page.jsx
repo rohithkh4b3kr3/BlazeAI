@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Script from "next/script";
 import {
   FaFilePdf,
   FaCode,
@@ -48,8 +49,27 @@ const item = {
 };
 
 export default function HomePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "BlazeAI",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+    description:
+      "Free online productivity tools for PDF, image, JSON, text, and currency workflows.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <div className="relative min-h-full w-full overflow-x-hidden">
+      <Script
+        id="blazeai-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Background: gradient + subtle grid */}
       <div className="fixed inset-0 -z-10 bg-black">
         <div
