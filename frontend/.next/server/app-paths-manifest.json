@@ -1,0 +1,6 @@
+{
+  "/page": "app/page.js",
+  "/json-formatter/page": "app/json-formatter/page.js",
+  "/pdf-to-word/page": "app/pdf-to-word/page.js",
+  "/unit-converter/page": "app/unit-converter/page.js"
+}

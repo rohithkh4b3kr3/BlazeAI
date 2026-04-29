@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "BlazeAI",
+    "slug": "blazeai-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.blazeai.app"
+    },
+    "android": {
+      "backgroundColor": "#000000",
+      "package": "com.blazeai.app"
+    },
+    "plugins": [
+      "expo-asset"
+    ]
+  }
+}

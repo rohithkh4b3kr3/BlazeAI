@@ -1,0 +1,12 @@
+"use client";
+
+export default function SummariserPage() {
+  return (
+    <div className="flex min-h-full flex-col items-center justify-center p-8">
+      <h1 className="mb-4 text-4xl font-extrabold text-[#ffdd57]">Coming Soon</h1>
+      <p className="max-w-md text-center text-gray-400">
+        YT Summariser is being brewed in the lab. Stay tuned for video summaries.
+      </p>
+    </div>
+  );
+}
